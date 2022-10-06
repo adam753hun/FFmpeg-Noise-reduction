@@ -13,3 +13,7 @@ Method & process:
 4 • second, Denoise audio samples with FFT
 
 5 • high-pass filter & low-pass filter 120 Hz - 44 kHz
+
+Using: copy wav (wav uncompressed pcm) audio file this location. (preferably; short path. Don't using any specific character or space. Avoid accented characters.)
+
+Run bat file.
