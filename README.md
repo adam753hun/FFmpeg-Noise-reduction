@@ -9,6 +9,7 @@ Method & process:
 
 3 • first, reduce background audio noise using "arnndn" (neural network models)
 - using (from GregorR / rnnoise-models)
+
 4 • second, Denoise audio samples with FFT
 
 5 • high-pass filter & low-pass filter 120 Hz - 44 kHz
