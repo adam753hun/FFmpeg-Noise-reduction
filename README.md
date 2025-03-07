@@ -1,8 +1,6 @@
 # FFmpeg-Noise-reduction
 Noise reduction using by FFmpeg
 
-**Noise Reduction Using FFmpeg**  
-
 **Method & Process (Not Final):**  
 
 1. **Audio Compression** → **Loudness Normalization** (-16 LUFS)  
