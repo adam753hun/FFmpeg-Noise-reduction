@@ -1,19 +1,16 @@
 # FFmpeg-Noise-reduction
 Noise reduction using by FFmpeg
 
-Method & process:
-(not final)
+**Noise Reduction Using FFmpeg**  
 
-1 • audio compression ->
-2 • Loudness Normalizer -16 LUFS
+**Method & Process (Not Final):**  
 
-3 • first, reduce background audio noise using "arnndn" (neural network models)
-- using (from GregorR / rnnoise-models)
+1. **Audio Compression** → **Loudness Normalization** (-16 LUFS)  
+2. Apply **background noise reduction** using the `arnndn` filter (neural network models from [GregorR/rnnoise-models](https://github.com/GregorR/rnnoise-models)).  
+3. Apply **FFT-based denoising** to the audio samples.  
+4. Apply **high-pass filter** (120 Hz) and **low-pass filter** (up to 44 kHz).  
 
-4 • second, Denoise audio samples with FFT
-
-5 • high-pass filter & low-pass filter 120 Hz - 44 kHz
-
-Using: copy wav (wav uncompressed pcm) audio file this location. (preferably; short path. Don't using any specific character or space. Avoid accented characters.)
-
-Run bat file.
+**Instructions:**  
+- Copy the uncompressed WAV (PCM) audio file to this location.  
+  - Use a **short file path** (avoid spaces, special characters, or accented letters).  
+- Run the BAT file.  
