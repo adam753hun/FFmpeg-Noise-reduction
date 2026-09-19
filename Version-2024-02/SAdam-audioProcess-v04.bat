@@ -7,7 +7,7 @@ mkdir kimenet_ 2>NUL
 
 FOR %%f IN (*.wav) DO (
   echo Converting: %%f
-  ffmpeg.exe -fflags +genpts -i "%%f" -filter_complex "acompressor=threshold=-17dB:ratio=2.5:1:attack=0.25:release=120.0:knee=2,volume=5dB,loudnorm=I=-16:TP=-1.5:LRA=11,arnndn=m=sh.rnnn,asendcmd='0.0 afftdn sn start',asendcmd='0.4 afftdn sn stop',afftdn=nr=20:nf=-40,highpass=f=120,lowpass=f=44000,agate=threshold=-50dB:attack=50:release=500:ratio=1000:range=0.0001,aresample=async=1" -ar 44.1k "kimenet_\%%~nf nr.wav"
+  ffmpeg.exe -fflags +genpts -i "%%f" -filter_complex "acompressor=threshold=-17dB:ratio=2.5:attack=0.25:release=120.0:knee=2,volume=5dB,loudnorm=I=-16:TP=-1.5:LRA=11,arnndn=m=sh.rnnn,asendcmd='0.0 afftdn sn start',asendcmd='0.4 afftdn sn stop',afftdn=nr=20:nf=-40,highpass=f=120,lowpass=f=44000,agate=threshold=-50dB:attack=50:release=500:ratio=1000:range=0.0001,aresample=async=1" -ar 44.1k "kimenet_\%%~nf nr.wav"
 )
 
 echo Finished
